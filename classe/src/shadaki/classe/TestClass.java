@@ -39,6 +39,8 @@ public class TestClass {
         
         System.out.println(engim);
         
+        System.out.println("---------------ORDINAMENTO PER ETA' ALUNNI----------------");
+        
         for(Studente ordinato:engim.getListaOrdinataStudenti())
         {
             System.out.println(ordinato);

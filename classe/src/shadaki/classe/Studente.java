@@ -1,7 +1,7 @@
 package shadaki.classe;
 
 
-public class Studente implements Comparable<Integer>{
+public class Studente implements Comparable<Studente>{
     private String nome;
     private String cognome;
     private int eta;
@@ -54,7 +54,7 @@ public class Studente implements Comparable<Integer>{
     }
 
     @Override
-    public int compareTo(Integer o) {
-        return this.getEta()-o;
+    public int compareTo(Studente o) {
+        return this.getEta()-o.getEta();
     }
 }

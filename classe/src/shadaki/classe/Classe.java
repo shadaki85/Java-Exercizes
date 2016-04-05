@@ -3,6 +3,9 @@ package shadaki.classe;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 
 public class Classe {
@@ -105,28 +108,9 @@ public class Classe {
         return scuola+stampa;
     }
     
-    public List<Studente> getListaOrdinataStudenti(){
-        List<Studente> ordinata = new ArrayList<>();
-        ordinata.add(new Studente("","",0));
-        for (int i=0;i<studenti.size()-1;i++)
-        {
-            //primo giro il primo è più vecchio del secondo
-           if(studenti.get(i).compareTo(ordinata.get(i).getEta()) >= 1)
-           {
-               //ordinata.remove(ordinata.get(i));
-               ordinata.add(i, studenti.get(i));
-           }
-           else if(studenti.get(i).compareTo(ordinata.get(i).getEta()) < 0)
-           {
-               ordinata.add(i+1,studenti.get(i));
-           }
-           else
-           {
-               //ordinata.add(studenti.get(i));
-           }
-        }
-        ordinata.remove(ordinata.get(0));
-        return ordinata;
+    public List<Studente> getListaOrdinataStudenti(){        
+        Collections.sort(studenti);
+        return studenti;
     }
 }
 
