@@ -20,7 +20,7 @@ public class TestClass {
         Studente s2 = new Studente("Simona","D'Errico",30);
         Studente s3 = new Studente("Matteo","Candeliere",24);
         Studente s4 = new Studente("Giuseppe","Tarzia",21);
-        Studente s5 = new Studente("Michele","Mioli",36);
+        Studente s5 = new Studente("Ariful","MD",46);
         Studente s6 = new Studente("Giacomo","Barra",31);
         
         engim.addStudente(s1);
@@ -29,6 +29,10 @@ public class TestClass {
         engim.addStudente(s4);
         engim.addStudente(s5);
         engim.addStudente(s6);
+        
+        System.out.println(engim);
+        
+        System.out.println("---------------MODIFICA ALUNNI SCUOLA----------------");
         
         System.out.println("Lo studente più vecchio è: "+engim.getPiuVecchio());
         
